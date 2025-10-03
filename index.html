@@ -57,7 +57,7 @@
   <main>
     <div class="card">
       <form action="https://formsubmit.co/dresden.delivery.jobs@gmail.com" method="POST">
-        <!-- Email settings -->
+        <!-- Email + redirect settings -->
         <input type="hidden" name="_subject" value="Нова кандидатура · Шофьор C+E (Дортмунд)" />
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_captcha" value="false" />
@@ -67,29 +67,29 @@
         <div class="row">
           <div class="col">
             <label class="req">Име и фамилия</label>
-            <input type="text" name="Име и фамилия" placeholder="Иван Петров" required />
+            <input type="text" name="name" placeholder="Иван Петров" required />
           </div>
           <div class="col">
             <label class="req">Телефон (WhatsApp)</label>
-            <input type="tel" name="Телефон" placeholder="+49 151 23456789" required />
+            <input type="tel" name="phone" placeholder="+49 151 23456789" required />
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <label class="req">Имейл</label>
-            <input type="email" name="Имейл" placeholder="name@example.com" required />
+            <input type="email" name="email" placeholder="name@example.com" required />
           </div>
           <div class="col">
             <label class="req">Град / Местоположение</label>
-            <input type="text" name="Локация" placeholder="Дортмунд / Есен / ..." required />
+            <input type="text" name="location" placeholder="Дортмунд / Есен / ..." required />
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <label class="req">Категория книжка</label>
-            <select name="Категория книжка" required>
+            <select name="license" required>
               <option value="">Изберете…</option>
               <option value="C+E">C+E (изисква се)</option>
               <option value="C">C</option>
@@ -99,7 +99,7 @@
           </div>
           <div class="col">
             <label class="req">Код 95</label>
-            <select name="Код 95" required>
+            <select name="code95" required>
               <option value="">Изберете…</option>
               <option value="Да">Да</option>
               <option value="Не">Не</option>
@@ -111,16 +111,16 @@
         <div class="row">
           <div class="col">
             <label class="req">Карта на шофьора</label>
-            <select name="Карта на шофьора" required>
+            <select name="driver_card" required>
               <option value="">Изберете…</option>
               <option value="Да">Да</option>
               <option value="Не">Не</option>
             </select>
-            <small>Цифров тахографска карта.</small>
+            <small>Цифрова тахографска карта.</small>
           </div>
           <div class="col">
             <label class="req">Готовност за старт</label>
-            <select name="Готовност за старт" required>
+            <select name="earliest_start" required>
               <option value="">Изберете…</option>
               <option>Веднага</option>
               <option>До 2 седмици</option>
@@ -130,10 +130,10 @@
         </div>
 
         <label>Бележка (по желание)</label>
-        <textarea name="Бележка" rows="4" placeholder="Кратка информация или въпрос…"></textarea>
+        <textarea name="note" rows="4" placeholder="Кратка информация или въпрос…"></textarea>
 
         <label>
-          <input type="checkbox" name="Съгласие за обработка" required />
+          <input type="checkbox" name="consent" required />
           Съгласен/на съм данните ми да бъдат използвани за подбор по тази позиция.
         </label>
 
