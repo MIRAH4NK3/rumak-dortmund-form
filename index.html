@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rumak Logistik GmbH – Кандидатстване (Дортмунд)</title>
+  <style>
+    :root { --bg:#f7f7fb; --card:#ffffff; --accent:#1b7f3b; --text:#222; --muted:#666; --danger:#b00020; --pill:#e7f4ec; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif; background:var(--bg); color:var(--text); }
+    header { background:var(--accent); color:#fff; padding:18px 16px; }
+    header .top { max-width:920px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    header h1 { margin:6px 0 0 0; font-size:22px; }
+    header p { margin:6px 0 0 0; opacity:.95; }
+    .lang { display:flex; gap:8px; align-items:center; }
+    .lang label { font-weight:600; }
+    select#lang { padding:8px 10px; border-radius:10px; border:0; font-weight:600; }
+    main { max-width:720px; margin:22px auto; padding:0 16px; }
+    .card { background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    .row { display:flex; gap:12px; flex-wrap:wrap; }
+    label { display:block; font-weight:600; margin:14px 0 6px; }
+    input, select, textarea { width:100%; padding:12px 12px; border:1px solid #d8dbe2; border-radius:10px; font-size:16px; }
+    input:focus, select:focus, textarea:focus { outline:2px solid #cde9d6; border-color:#9fd6b4; }
+    .hint { color:var(--muted); font-size:13px; margin-top:4px; }
+    .required::after { content:" *"; color:var(--danger); }
+    .actions { display:flex; gap:12px; margin-top:16px; align-items:center; flex-wrap:wrap; }
+    button { background:var(--accent); color:#fff; border:0; padding:14px 18px; border-radius:10px; font-size:16px; font-weight:700; cursor:pointer; }
+    button:hover { filter:brightness(0.95); }
+    .note { font-size:14px; color:var(--muted); }
+    footer { text-align:center; color:var(--muted); font-size:13px; margin:24px 0 32px; }
+    .pill { display:inline-block; background:var(--pill); color:#1f7a3f; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div>
+        <div class="pill" id="hdr-pill">Rumak Logistik GmbH – Amazon Partner</div>
+        <h1 id="hdr-title">Шофьор на камион C+E – Дортмунд</h1>
+        <p id="hdr-sub">Вътрешни курсове · 2800 € нето + бонуси · Mercedes-Benz Actros</p>
+      </div>
+      <div class="lang">
+        <label for="lang" id="lang-label">Език:</label>
+        <select id="lang">
+          <option value="bg" selected>Български</option>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="uk">Українська</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <form id="apply-form" action="https://formsubmit.co/dresden.delivery.jobs@gmail.com" method="POST">
+        <input type="hidden" name="_subject" id="fs-subject" value="Нова кандидатура – Шофьор C+E (Дортмунд)">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" id="fs-autoresponse" value="Thank you for your application! ✅
+We received your details successfully. Our team will contact you soon about next steps.
+
+Благодарим Ви за кандидатурата! ✅
+Получихме Вашите данни успешно. Нашият екип ще се свърже с Вас скоро относно следващите стъпки.
+
+Vielen Dank für Ihre Bewerbung! ✅
+Wir haben Ihre Daten erhalten. Unser Team meldet sich in Kürze bezüglich der nächsten Schritte.
+
+Дякуємо за вашу заявку! ✅
+Ми отримали ваші дані. Наша команда незабаром зв’яжеться з вами щодо подальших кроків.">
+        <input type="hidden" name="_next" id="fs-next" value="">
+
+        <div class="row">
+          <div style="flex:1 1 300px">
+            <label class="required" id="lbl-name">Име и фамилия</label>
+            <input type="text" name="Name" id="inp-name" placeholder="Иван Петров" required>
+          </div>
+          <div style="flex:1 1 220px">
+            <label class="required" id="lbl-phone">Телефон (WhatsApp)</label>
+            <input type="tel" name="Phone" id="inp-phone" placeholder="+49 151 23456789" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div style="flex:1 1 260px">
+            <label class="required" id="lbl-email">Имейл</label>
+            <input type="email" name="Email" id="inp-email" placeholder="name@example.com" required>
+          </div>
+          <div style="flex:1 1 180px">
+            <label class="required" id="lbl-city">Град / Местоположение</label>
+            <input type="text" name="Location" id="inp-city" placeholder="Дортмунд / Есен / ..." required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div style="flex:1 1 180px">
+            <label class="required" id="lbl-license">Категория книжка</label>
+            <select name="License" id="sel-license" required>
+              <option value="" id="opt-choose">Изберете…</option>
+              <option id="opt-ce">C+E</option>
+              <option id="opt-c">C</option>
+              <option id="opt-b">B</option>
+            </select>
+          </div>
+          <div style="flex:1 1 180px">
+            <label class="required" id="lbl-code95">Код 95</label>
+            <select name="Code95" id="sel-code95" required>
+              <option value="" id="opt-choose95">Изберете…</option>
+              <option id="opt-yes95">Да</option>
+              <option id="opt-no95">Не</option>
+            </select>
+          </div>
+          <div style="flex:1 1 180px">
+            <label class="required" id="lbl-card">Карта на шофьора</label>
+            <select name="DriverCard" id="sel-card" required>
+              <option value="" id="opt-choosecard">Изберете…</option>
+              <option id="opt-yescard">Да</option>
+              <option id="opt-nocard">Не</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div style="flex:1 1 200px">
+            <label class="required" id="lbl-start">Готовност за старт</label>
+            <select name="Start" id="sel-start" required>
+              <option value="" id="opt-start-choose">Изберете…</option>
+              <option id="opt-now">Веднага</option>
+              <option id="opt-2w">До 2 седмици</option>
+              <option id="opt-1m">До 1 месец</option>
+            </select>
+          </div>
+          <div style="flex:1 1 200px">
+            <label id="lbl-lang">Езици</label>
+            <select name="Languages" id="sel-lang">
+              <option id="opt-nolang">Без език</option>
+              <option>Български</option>
+              <option>Украински</option>
+              <option>Руски</option>
+              <option>Немски (основно)</option>
+              <option>Английски (основно)</option>
+            </select>
+            <div class="hint" id="hint-lang">Език не е задължителен.</div>
+          </div>
+        </div>
+
+        <label id="lbl-note">Бележка (по желание)</label>
+        <textarea name="Note" id="inp-note" rows="4" placeholder="Кратка информация или въпрос…"></textarea>
+
+        <label>
+          <input type="checkbox" name="Consent" id="chk-consent" required>
+          <span id="lbl-consent">Съгласен/на съм данните ми да бъдат използвани за подбор по тази позиция.</span>
+        </label>
+
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="actions">
+          <button type="submit" id="btn-submit">Изпрати кандидатура</button>
+          <span class="note" id="note-bottom">След изпращане ще получите потвърждение по имейл.</span>
+        </div>
+      </form>
+    </div>
+
+    <p class="note" style="margin-top:14px" id="note-direct">
+      Забележка: Ако предпочитате директно, изпратете телефон и кратка информация на <strong>dresden.delivery.jobs@gmail.com</strong>.
+    </p>
+  </main>
+
+  <footer>
+    © Rumak Logistik GmbH – Hiring Dortmund
+  </footer>
+</body>
+</html>
